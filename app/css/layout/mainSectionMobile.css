@@ -1,0 +1,151 @@
+/* Mídia query para dispositivos móveis */
+@media (max-width: 768px) {
+    main {
+        height: auto;
+        padding: 10px;
+    }
+
+    #client-container {
+        grid-template-columns: 1fr;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .client-data, .loyalty-card-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .client-profile {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+
+    .client-photo-wrapper {
+        width: 48px;
+        height: 48px;
+        padding: 2px;
+        border-radius: 8px;
+    }
+
+    .client-photo {
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+    }
+
+    .client-info h2 {
+        font-size: 16px;
+    }
+
+    .client-info p {
+        font-size: 10px;
+    }
+
+    section .appointment-history {
+        display:none;
+    }
+
+    .loyalty-card {
+        padding: 24px 16px;
+    }
+
+    .loyalty-header {
+        align-items: flex-start;
+        margin-bottom: 16px;
+    }
+
+    .loyalty-info {
+        flex-direction: column;
+        gap: 8px;
+        max-width: 50%;
+
+    }
+    .loyalty-info p {
+        font-size: 12px;
+        width: fit-content;
+    }
+
+    .client-id {
+        width: fit-content;
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    .stamps {
+        flex-direction: row;
+        justify-content: flex-start;
+        gap:5px;
+    }
+
+    .stamp {
+        width: 56px;
+        height: 56px;
+    }
+
+    .stamp.checked {
+        background-size: 40%;
+        background-position: center;
+    }
+
+    .stamp.gift {
+        background-size: 30%;
+    }
+
+    .loyalty-progress {
+        padding: 1rem;
+    }
+
+    .loyalty-progress p {
+        font-size: 14px;
+    }
+
+    .loyalty-progress p strong {
+        font-size: 20px;
+    }
+
+    .progress-bar-container {
+        align-items: center;
+    }
+
+    .progress-bar {
+        width: 75%;
+    }
+
+    .present {
+        margin:auto;
+        width:56px;
+        height:56px;
+    }
+
+    .appointment-history-mobile{
+        display: flex;
+        flex-direction: column;
+        background-color: var(--color-gray-100);
+        border-radius: 16px;
+        padding: 28px  28px 24px  24px ;
+        width: 100%;
+        max-height: 1000px;
+        overflow-y:auto;
+        flex:1
+    }
+
+    .appointment-container > span {
+        font-weight: bold;
+        color: var(--color-gray-600);
+    }
+    .appointment-history-mobile ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .appointment-history-mobile li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+        font-size: 14px;
+        color: var(--color-gray-500);
+    }
+}

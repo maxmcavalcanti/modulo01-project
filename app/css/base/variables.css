@@ -1,0 +1,20 @@
+/* base/_variables.css */
+:root {
+    /* Cores Principais */
+    --color-pink: #D658B3;
+    --color-green: #45B442;
+  
+    /* Cores Base */
+    --color-gray-700: #332B31;
+    --color-gray-600: #4A4448;
+    --color-gray-500: #756C71;
+    --color-gray-400: #D3CFD2;
+    --color-gray-300: #DFDCDF;
+    --color-gray-200: #E9E7E9;
+    --color-gray-100: #F4F1F2;
+    --color-white: #FFFFFF;
+  
+    /* Gradiente */
+    --gradient-base: linear-gradient(90deg, #2DAA6E 0%, #2DAAAA 33.33%, #856CCF 66.67%, #D658B3 100%);
+  }
+  

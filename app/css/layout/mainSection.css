@@ -1,0 +1,262 @@
+
+main {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Oxygen', sans-serif;
+    height: 100%;
+}
+
+#client-container {
+    display: grid;
+    width: 100%;
+    max-width: 1000px;  
+    height:100%;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    padding: 20px;
+}
+.client-data {
+    display:flex;
+    flex-direction:column;
+    flex:1;
+    height:100%;
+    justify-content:space-between;
+    gap:1rem;
+}
+.loyalty-card-container {
+    display:flex;
+    flex-direction:column;
+    flex:1;
+    height:100%;
+    justify-content:space-between;
+    gap:1rem;
+}
+/* Seção de perfil do cliente */
+.client-profile {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-gray-100);
+    border-radius: 16px;
+    padding: 1rem;
+    width: 100%;
+    height: fit-content;
+    gap:1rem;
+}
+
+.client-photo-wrapper {
+    width: 62px; /* Width + Border (56px + 3px * 2) */
+    height: 62px; /* Height + Border (56px + 3px * 2) */
+    padding: 3px; /* Simula a borda */
+    border-radius: 12px; /* Border radius + Border (10px + 3px) */
+    background: var(--gradient-base);
+    display: inline-block;
+}
+
+.client-photo {
+    width: 56px;
+    height: 56px;
+    border-radius: 10px;
+    display: block;
+
+}
+
+.client-info h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color:var(--color-gray-600);
+}
+
+.client-info p {
+    font-size: 12px;
+    margin: 4px 0 0 0;
+    color:var(--color-gray-500);
+}
+/* Seção de histórico de agendamentos */
+.appointment-history {
+    background-color: var(--color-gray-100);
+    border-radius: 16px;
+    padding: 28px  28px 24px  24px ;
+    width: 100%;
+    max-height: 400px;
+    flex:1;
+    overflow-y:auto;
+}
+.total-cuts-container {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    height:fit-content;
+    padding-bottom:1rem;
+    border-bottom: 1px solid var(--color-gray-300);
+}
+.appointment-history h3 {
+    font-size: 14px;
+    text-transform: uppercase;
+    color:var(--color-gray-500);
+}
+.total-cuts-container span {
+    font-size: 12px;
+    color:var(--color-gray-500);
+}
+.appointment-container {
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+}
+
+.appointment-container > span {
+    font-weight: bold;
+    color: var(--color-gray-600);
+}
+.appointment-history ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.appointment-history li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    font-size: 14px;
+    color: var(--color-gray-500);
+}
+
+
+/* Seção do cartão de fidelidade */
+.loyalty-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--color-gray-100);
+    border-radius: 10px;
+    padding:36px 32px 32px 32px;
+    width: 100%;
+    flex:1
+}
+
+.loyalty-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.loyalty-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.loyalty-header p {
+    margin: 0;
+    font-size: 14px;
+    color: var(--color-gray-500);
+}
+
+.client-id {
+    padding: 8px 12px;
+    border-radius: 999px;
+    font-size: 14px;
+    background: var(--color-gray-300);
+    
+}
+
+.stamps {
+   display: flex;
+   justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.stamp {
+    width: 88px;
+    height: 88px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-gray-200);
+}
+
+.stamp.checked {
+        background-image: url(/assets/check-fidelidade.png);
+        background-size: 50%;
+        background-repeat: no-repeat;
+        background-position: 50% 60%;
+}
+
+.stamp.unchecked {
+    background-color: #e0e0e0;
+}
+
+.stamp.gift {
+    background-image: url(/assets/fidelidade-presente.svg);
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+
+/* Seção de progresso do cartão de fidelidade */
+.loyalty-progress {
+    display: flex;
+    background-color: var(--color-gray-100);
+    border-radius: 10px;
+    padding: 2rem;
+    width: 100%;
+}
+.loyalty-progress-progress-container{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    gap:1rem;
+    flex:1;
+}
+
+.loyalty-progress p {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    color: var(--color-gray-500);
+}
+
+.loyalty-progress p strong {
+    margin: 0 0 10px 0;
+    font-size: 24px;
+    color: var(--color-gray-600);
+    font-weight: bold;
+}
+
+.progress-bar-container {
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+    gap:12px
+}
+.progress-bar {
+    display:flex;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    height: 10px;
+    width: 75%;
+    overflow: hidden;
+}
+
+.progress {
+    background: var(--gradient-base);
+    height: 100%;
+    border-radius: 10px;
+}
+
+.progress-info {
+    display: block;
+    font-size: 12px;
+    color: #777;
+    text-align: right;
+}
+.appointment-history-mobile{
+    display:none;
+}

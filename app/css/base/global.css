@@ -1,0 +1,14 @@
+/* base/_typography.css */
+body {
+    font-family: 'Oxygen', sans-serif;
+    line-height: '140%';
+  }
+  
+/* base/_global.css */
+body {
+    background-color: var(--color-gray-200);
+    color: var(--color-gray-500);
+  }
+  
+
+  
