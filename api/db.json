@@ -40,12 +40,16 @@
                 {
                     "date": "23/10/2023",
                     "time": "15:00"
+                },
+                {
+                    "date": "23/10/2023",
+                    "time": "15:00"
                 }
             ],
             "loyaltyCard": {
-                "totalCuts": 9,
+                "totalCuts": 10,
                 "cutsNeeded": 10,
-                "cutsRemaining": 1
+                "cutsRemaining": 0
             }
         },
         {

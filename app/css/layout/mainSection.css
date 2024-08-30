@@ -8,6 +8,11 @@ main {
     height: 100%;
 }
 
+#client-container-empty{
+    margin-top: 2rem;
+    text-align: center;
+}
+
 #client-container {
     display: grid;
     width: 100%;

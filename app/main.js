@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
             });
             if (!response.ok) {
                 alert('Cliente não encontrado!');
+                return; // Exit if the client is not found
             }
             const data = await response.json();
             displayClientData(data); // Chama a função para exibir os dados e remover o container vazio
@@ -37,6 +38,25 @@ document.addEventListener("DOMContentLoaded", function () {
             console.error('Error fetching client data:', error);
         }
         clearInputField(); // Clear the input field after logging the value
+    }
+
+    // Function to create and show the modal
+    function showCongratulationsModal() {
+        const modal = document.getElementById('congratulations-modal');
+        const closeButton = modal.querySelector('.close-button');
+
+        modal.classList.remove('hidden');
+
+        closeButton.addEventListener('click', () => {
+            modal.classList.add('hidden');
+        });
+
+        // Close modal if clicking outside the modal content
+        window.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.classList.add('hidden');
+            }
+        });
     }
 
     function displayClientData(client) {
@@ -151,7 +171,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <span class="total-cuts">${client.loyaltyCard.totalCuts} cortes</span>
             </div>
             <div class="list-container">
-            <ul></ul>
+                <ul></ul>
             </div>
         `;
         const historyListMobile = appointmentHistoryMobile.querySelector('ul');
@@ -169,8 +189,12 @@ document.addEventListener("DOMContentLoaded", function () {
             historyListMobile.appendChild(historyItem);
         });
         clientContainer.appendChild(appointmentHistoryMobile);
-    }
 
+        // Show modal if there are no cuts remaining
+        if (client.loyaltyCard.cutsRemaining === 0) {
+            showCongratulationsModal();
+        }
+    }
 
     // Initial setup
     function initialize() {
